@@ -1,22 +1,23 @@
-
-const carousel = document.getElementById("s-depositions");
-const items = carousel.querySelectorAll(".item");
+const buttons = document.querySelectorAll(".button-carousel button");
+const items = document.querySelectorAll(".item");
 const maxItems = items.length;
-const radioLabels = carousel.querySelectorAll(".button-carousel label");
 let currentItem = 0;
 
-carousel.addEventListener("click", (e) => {
-  const targetLabel = e.target.tagName === "LABEL" ? e.target : null;
-  if (targetLabel) {
-    currentItem = [...radioLabels].indexOf(targetLabel);
-    updateCarousel();
-  }
-});
+buttons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    currentItem = index;
 
-function updateCarousel() {
-  items.forEach((item, index) => {
-    item.classList.toggle("current-item", index === currentItem);
+    items.forEach((item) => item.classList.remove("current-item"));
+    items[currentItem].classList.add("current-item");
+
+    items[currentItem].scrollIntoView({
+      inline: "center",
+      behavior: "smooth",
+      block: "nearest",
+    });
+
+    //button radio
+    buttons.forEach((btn) => btn.classList.remove("current-button"));
+    button.classList.add("current-button");
   });
-
-  items[currentItem].scrollIntoView({inline: "center", behavior: "smooth"});
-}
+});
