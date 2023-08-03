@@ -56,7 +56,11 @@ footer {
   p {
     color: rgba(255, 255, 255, 0.70);
     font: 400 1.5rem $font-secondary;
+    cursor: pointer;
     padding-bottom: 1.7rem;
+    &:hover {
+      color: $light-main;
+    }
   }
 }
 

@@ -1,3 +1,4 @@
+
 const buttons = document.querySelectorAll(".button-carousel button");
 const items = document.querySelectorAll(".item");
 const maxItems = items.length;
