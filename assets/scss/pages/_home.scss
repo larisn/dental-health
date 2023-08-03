@@ -1,0 +1,74 @@
+
+#s-home {
+  background: url(/assets/img/bg-home.png) no-repeat center 10% / cover;
+  height: 100%;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: $dark-mask-home;
+  }
+  @include responsive-tablet() {
+    height: 85%;
+  }
+  @include responsive-mobile() {
+    height: 100%;
+  }
+  .container {
+    @include container();
+    position: relative;
+    z-index: 2;
+    @include responsive-tablet() {
+      padding: 20rem 4rem 12rem 4rem;
+    }
+    @include responsive-mobile() {
+      padding: 14rem 2.5rem 12rem 2.5rem;
+    }
+    @include responsive-desktop() {
+      padding: 26rem 4rem 23rem 4rem;
+    }
+  }
+}
+
+.container-text-home {
+  h1 {
+    font: 500 5rem $font-main;
+    color: $light-main;
+    line-height: 70px;
+    max-width: 920px;
+    @include responsive-tablet() {
+      font-size: 4rem;
+      line-height: 60px;
+    }
+    @include responsive-mobile() {
+      font-size: 3.5rem;
+      line-height: 55px;
+    }
+  }
+  p {
+    color: $light-p;
+    font: 300 2rem $font-secondary;
+    max-width: 780px;
+    line-height: 33px;
+    margin: 3rem 0 4.5rem 0;
+    @include responsive-mobile() {
+      font-size: 1.7rem;
+    }
+  }
+  button {
+    width: 250px;
+    height: 56px;
+    background-color: $purple-main;
+    border-radius: 2px;
+    a {
+      color: $light-main;
+      font-weight: 500;
+    }
+    &:hover {
+      background-color: #4515ca;
+    }
+  }
+}

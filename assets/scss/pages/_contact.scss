@@ -1,0 +1,151 @@
+
+#s-contact {
+  .container {
+    @include container();
+    @include responsive-tablet() {
+      padding: 8rem 4rem 10rem 4rem;
+    }
+    @include responsive-mobile() {
+      padding: 8rem 2.5rem 10rem 2.5rem;
+    }
+    @include responsive-desktop() {
+      padding: 11rem 2rem 13rem 2rem;
+    }
+  }
+}
+
+.container-text-contact {
+  h1 {
+    font: 700 4.2rem $font-main;
+    color: $dark-main;
+    span {
+      color: $purple-main;
+    }
+    @include responsive-mobile() {
+      font-size: 3.5rem;
+    }
+  }
+  p {
+    font: 500 1.7rem $font-secondary;
+    max-width: 790px;
+    line-height: 32px;
+    margin-top: 2.5rem;
+    color: $gray-p;
+    @include responsive-mobile() {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.details-contact {
+  @include align-center();
+  gap: 100px;
+  margin-top: 10rem;
+  @include responsive-tablet() {
+    flex-wrap: wrap;
+    margin-top: 6rem;
+    gap: 50px;
+  }
+  .content-details-contact {
+    @include align-center();
+    gap: 30px;
+    img {
+      width: 43px;
+    }
+    h2 {
+      font: 700 2.3rem $font-main;
+      color: $dark-main;
+    }
+    p {
+      font: 500 1.6rem $font-main;
+      padding-top: .7rem;
+      color: $gray-p;
+      line-height: 25px;
+    }
+  }
+}
+
+
+.container-form {
+  margin-top: 6rem;
+  @include align-center();
+  gap: 130px;
+  @include responsive-tablet() {
+    display: block;
+  }
+  img {
+    width: 600px;
+    transform: translateY(40px);
+    @include responsive-tablet() {
+      display: none;
+    }
+  }
+}
+
+.title-contact {
+  h3 {
+    margin-top: 8rem;
+    font: 700 3.8rem $font-main;
+    color: $dark-main;
+    @include responsive-tablet() {
+      margin-top: 4rem;
+    }
+  }
+  p {
+    max-width: 600px;
+    margin-bottom: 5rem;
+  }
+}
+
+form {
+  ul {
+    div:not(.button-submit) {
+      @include align-center();
+      gap: 20px;
+    }
+    input:not(.button-submit) {
+      margin-bottom: 2.5rem;
+      padding: 2rem 3rem 2rem 1.8rem;
+      background-color: $light-bg-form;
+      border-radius: 3px;
+      width: 100%;
+      outline: none;
+      caret-color: $purple-main;
+      font-weight: 500;
+      color: $dark-main;
+      &::placeholder {
+        color: $gray-p-form;
+        font-weight: 400;
+        padding: 5px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.input-message {
+  width: 568px;
+  height: 150px;
+  padding-bottom: 9.5rem !important;
+  @include responsive-mobile() {
+    height: 200px;
+  }
+}
+
+.button-submit {
+  color: $light-main;
+  cursor: pointer;
+  display: block;
+  width: 125px;
+  font: 500 1.6rem $font-secondary;
+  background-color: $purple-main;
+  border-radius:  2px;
+  transition: ease-out 0.3s;
+  padding: 1.3rem 2rem;
+  margin-top: 1rem;
+  &:hover {
+    background-color: $dark-main;
+  }
+}

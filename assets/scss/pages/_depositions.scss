@@ -1,0 +1,164 @@
+
+#s-depositions {
+  position: relative;
+  .container {
+    @include container();
+    @include responsive-tablet() {
+      padding: 8rem 4rem 10rem 4rem;
+    }
+    @include responsive-mobile() {
+      padding: 8rem 2.5rem 10rem 2.5rem;
+    }
+    @include responsive-desktop() {
+      padding: 11rem 4rem 15rem 4rem;
+    }
+  }
+}
+
+.container-text-depositions {
+  h1 {
+    font: 700 4.2rem $font-main;
+    color: $dark-main;
+    span {
+      color: $purple-main;
+    }
+    @include responsive-mobile() {
+      font-size: 3.5rem;
+    }
+  }
+  p {
+    font: 500 1.7rem $font-secondary;
+    max-width: 750px;
+    line-height: 32px;
+    margin-top: 2.5rem;
+    color: $gray-p;
+    @include responsive-mobile() {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.posts-wrapper {
+  overflow-x: auto;
+  margin-top: 10rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.posts {
+  display: flex;
+  flex-flow: nowrap;
+  gap: 35px;
+}
+
+.button-carousel {
+  @include flexbox-center();
+  gap: 10px;
+  margin-top: 3rem;
+  label {
+    width: 5px;
+    border: 1px solid $purple-main;
+    border-radius: 50%;
+    padding: 6px;
+    transition: .2s all ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: $purple-main;
+    }
+  }
+}
+
+.deposition1 {
+  text-align: center;
+  padding: 2.5rem 3rem 3rem 3rem;
+  border-radius: 8px;
+  h2 {
+    font: 400 1.8rem $font-third;
+    color: $light-main;
+    padding-bottom: 1rem;
+  }
+  p {
+    font: 300 1.6rem $font-secondary;
+    color: $light-main;
+    max-width: 300px;
+    line-height: 28px;
+    padding-top: 2rem;
+  }
+
+  .people-picture {
+    margin: 0 auto;
+    padding: 2.5rem 0 1rem 0;
+    width: 80px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 87px;
+      height: 87px;
+      top: 21px;
+      left: -6px;
+      border-radius: 50%;
+      border: 3px solid $purple-main;
+      animation: spin 12s linear infinite;
+    }
+  }
+  h4 {
+    font: 400 2rem $font-third;
+    color: $light-main;
+  }
+  span {
+    font: 200 1.5rem $font-third;
+    color: $light-main;
+    letter-spacing: .5px;
+  }
+}
+
+.deposition2 {
+  background-color: $light-bg-carousel;
+  h2 {
+    color: $dark-main;
+    font-weight: 500;
+  }
+  p, h4, span {
+    color: $dark-main;
+  }
+  .people-picture {
+    &::after {
+      color: $purple-main;
+      top: 19px;
+    }
+  }
+}
+
+.item {
+  flex-shrink: 0;
+  opacity: 0.2;
+  transition: all 600ms ease-in-out;
+}
+
+.current-item {
+  opacity: 1;
+  background: $purple-gradient-carousel;
+  h2, p, h4, span {
+    color: $light-main;
+  }
+  .people-picture {
+    &::after {
+      border-color: $light-main;
+    }
+  }
+  .button-carousel {
+    label {
+      background-color: $purple-main
+    }
+  }
+}
+
+.stars {
+  @include flexbox-center();
+  gap: 8px;
+  img {
+    width: 18px;
+  }
+}

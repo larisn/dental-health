@@ -1,0 +1,16 @@
+
+@import "../abstracts/variables",
+"../abstracts/mixins",
+"../abstracts/reset",
+"../pages/nav",
+"../pages/home",
+"../pages/about",
+"../pages/services",
+"../pages/depositions",
+"../pages/faq",
+"../pages/contact",
+"../pages/footer";
+
+body {
+  background-color: $light-bg;
+}
