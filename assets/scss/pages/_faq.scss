@@ -4,19 +4,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 70%;
-  @include responsive-tablet() {
-    height: 85%;
-  }
-  @include responsive-mobile() {
-    height: 100%;
-  }
   .container {
     @include container();
     @include responsive-tablet() {
       padding: 14rem 4rem 9rem 4rem;
     }
     @include responsive-mobile() {
-      padding: 14rem 2.5rem 9rem 2.5rem;
+      padding: 10rem 2.5rem 7rem 2.5rem;
     }
     @include responsive-desktop() {
       padding: 15rem 4rem 9rem 4rem;
@@ -43,6 +37,9 @@
     font: 600 1.9rem $font-main;
     color: $dark-main;
     margin-bottom: 1.3rem;
+    @include responsive-mobile() {
+      line-height: 28px;
+    }
   }
   p {
     color: $gray-questions;

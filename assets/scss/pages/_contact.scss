@@ -51,6 +51,9 @@
     gap: 30px;
     img {
       width: 43px;
+      @include responsive-mobile() {
+        width: 35px;
+      }
     }
     h2 {
       font: 700 2.3rem $font-main;

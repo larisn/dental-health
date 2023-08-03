@@ -41,6 +41,9 @@
 .posts-wrapper {
   overflow-x: auto;
   margin-top: 10rem;
+  @include responsive-mobile() {
+    margin-top: 6rem;
+  }
   &::-webkit-scrollbar {
     display: none;
   }
