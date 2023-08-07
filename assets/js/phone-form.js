@@ -1,3 +1,4 @@
+
 const phoneInput = document.getElementById("phone");
 
 phoneInput.addEventListener("input", () => {

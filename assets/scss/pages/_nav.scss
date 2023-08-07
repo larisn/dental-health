@@ -1,19 +1,17 @@
 
-header {
+.navbar {
   position: fixed;
   left: 0;
   right: 0;
   z-index: 999;
-  background-color: transparent;
+  background-color: $light-bg;
   transition: background-color .3s ease-in-out;
-  padding: 3.5rem 2.2rem 3rem 10rem;
-  @include responsive-tablet() {
-    padding: 1.8rem 2.2rem 2.4rem 2.2rem;
-  }
+  margin-bottom: 10rem;
   .container {
     @include container();
     nav {
       @include flexbox-between();
+      padding: 2rem;
       .nav-list {
         display: flex;
         gap: 50px;
@@ -25,11 +23,11 @@ header {
         }
         li {
           a {
-            color: $light-link-nav;
-            font: 400 1.8rem "Inter";
+            color: $dark-main;
+            font: 400 1.7rem $font-main;
             transition: all .3s ease-in-out;
             &:hover {
-              color: $purple-main;
+              color: $green-main;
             }
           }
         }
@@ -38,22 +36,67 @@ header {
   }
 }
 
+.container-banner-header {
+  background: $main-gradient;
+  padding: 1rem;
+  @include responsive-tablet() {
+    display: none;
+  }
+}
+
+.container-content-banner {
+  @include flexbox-between();
+  max-width: 1310px;
+  margin: 0 auto;
+}
+
+.content-banner-header {
+  @include align-center();
+  @include responsive-tablet() {
+    flex-wrap: wrap;
+  }
+  div {
+    @include align-center();
+    margin-left: 30px;
+    gap: 5px;
+    @include responsive-tablet() {
+      margin-left: 14px;
+    }
+    p {
+      color: $gray-banner-header;
+      font-family: $font-main;
+      font-weight: 500;
+    }
+  }
+  img {
+    width: 30px;
+  }
+}
+
+.banner-links {
+  @include align-center();
+  gap: 17px;
+  img {
+    width: 23px;
+  }
+}
+
 .brand {
-  width: 150px;
+  width: 180px;
   margin-top: 1rem;
   @include responsive-desktop() {
     display: block;
-    width: 200px;
+    width: 240px;
   }
 }
 
 .nav-mobile {
   display: none;
-  margin-top: 10px;
+  margin-top: 11px;
   div {
     width: 28px;
     height: 2px;
-    background-color: $light-main;
+    background-color: $dark-main;
     transition: .4s;
     margin: 6px 0;
   }
@@ -86,10 +129,13 @@ header {
     width: 100vw;
     height: 100vh;
     z-index: 999;
-    background-color: $dark-bg-nav;
+    background-color: $light-bg;
     flex-direction: column;
     padding-top: 4rem;
     visibility: hidden;
+    .container-banner-header {
+      display: none;
+    }
   }
   .nav-mobile {
     display: block;
@@ -102,19 +148,7 @@ header {
   }
 }
 
-.button-contact-nav {
-  border: 1px solid $purple-main;
-  padding: 1rem 2.4rem 1.2rem 2.4rem;
-  border-radius: 2px;
-  a {
-    font-size: 1.8rem;
-  }
-  &:hover {
-    background-color: $purple-main;
-  }
-}
-
 .solid-nav {
-  background-color: $dark-bg-nav;
+  background-color: $light-bg;
   z-index: 999;
 }

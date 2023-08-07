@@ -1,0 +1,49 @@
+
+#s-banner-experience {
+  background: url(/assets/img/banner-blue.png) no-repeat center / cover;
+  height: 50%;
+  .container {
+    @include container();
+    @include responsive-tablet() {
+      padding: 8rem 4rem 8rem 4rem;
+    }
+    @include responsive-mobile() {
+      padding: 8rem .6rem 8rem .6rem;
+    }
+    @include responsive-desktop() {
+      padding: 11rem 1rem 11rem 1rem;
+    }
+  }
+}
+
+.content-banner {
+  @include flexbox-center();
+  gap: 70px;
+  @include responsive-tablet() {
+    gap: 120px;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    justify-content: start;
+  }
+  div {
+    @include align-center();
+    gap: 30px;
+    @include responsive-mobile {
+      gap: 15px;
+    }
+    div {
+      display: block;
+    }
+    h1 {
+      font: 700 4.2rem $font-main;
+      color: $light-main;
+    }
+    p {
+      font: 400 1.8rem $font-main;
+      color: $light-main;
+      padding-top: .8rem;
+    }
+  }
+}

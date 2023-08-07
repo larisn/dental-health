@@ -1,0 +1,58 @@
+
+#s-banner-contact {
+  background: url(/assets/img/banner-green.png) no-repeat center / cover;
+  height: 50%;
+  .container {
+    @include container();
+    @include responsive-tablet() {
+      padding: 8rem 4rem 8rem 4rem;
+    }
+    @include responsive-mobile() {
+      padding: 8rem .6rem 8rem .6rem;
+    }
+    @include responsive-desktop() {
+      padding: 11rem 1rem 11rem 1rem;
+    }
+  }
+}
+
+.content-banner {
+  @include flexbox-center();
+  gap: 70px;
+  @include responsive-tablet() {
+    gap: 120px;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    justify-content: start;
+  }
+
+  h1 {
+    font: 300 2.6rem $font-main;
+    color: $light-main;
+    line-height: 50px;
+    text-align: center;
+    @include responsive-mobile() {
+      font-size: 2rem;
+      line-height: 40px;
+    }
+    b {
+      font: 600 2.6rem $font-main;
+      @include responsive-mobile() {
+        font-size: 2rem;
+      }
+    }
+    a {
+      font: 500 2.6rem $font-main;
+      color: $light-main;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+      @include responsive-mobile() {
+        font-size: 2rem;
+      }
+    }
+  }
+}

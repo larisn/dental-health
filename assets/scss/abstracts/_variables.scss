@@ -1,39 +1,34 @@
 
 // default font
-$font-main: 'Urbanist', sans-serif;
-$font-secondary: 'Inter', sans-serif;
-$font-third: 'Poppins', sans-serif;
+$font-main: 'Montserrat', sans-serif;
+$font-secondary: 'Urbanist', sans-serif;
+
+
+// main colors
+$green-main: #8CA448;
+$blue-main: #3497C2;
+$main-gradient: linear-gradient(90deg, rgba(0, 147, 209, 0.50) 0%, rgba(105, 209, 4, 0.45) 100%);
+$gradient-carousel:linear-gradient(135deg, rgba(142, 170, 57, 0.933) 0%, rgba(24, 125, 179, 0.919) 85%);
 
 
 // dark colors
-$dark-main: #14101D;
-$dark-img-services: rgba(20, 16, 29, 0.19);
-$dark-p: #010101;
-$dark-mask-home: rgba(7, 13, 24, 0.95);
+$dark-main: #1B1C21;
+$dark-p: #1F1F1F;
 $dark-bg-nav: #070d18;
 
 
 //gray colors
 
-$gray-line-footer: #3F3E45;
-$gray-p: #3C3C3C;
-$gray-questions: #3E3E3E;
-$gray-p-form: #5A5A5A;
+$gray-placeholder: #5A5A5A;
+$gray-p-services: #363841;
+$gray-stroke-footer: #7D7D7D;
+$gray-banner-header: #2c2c2c;
 
 
 // light colors
 
-$light-bg: #FDFBFF;
+$light-bg: #F6F8FB;
 $light-main: #FFFFFF;
-$light-p: #EAEAEA;
-$light-bg-form: #F2F0F6;
-$light-bg-carousel: #cbc4da;
-$light-link-nav: #C9C9C9;
-$light-p-services: #F4ECFF;
+$light-bg-services: #FCFDFF;
+$light-bg-input: #F9FEF9;
 
-
-// purple colors
-
-$purple-main: #6F2BFF;
-$purple-gradient-bg-services: linear-gradient(180deg, rgba(96, 20, 255, 1) 0%, rgba(132, 74, 255, 1) 80%);
-$purple-gradient-carousel: linear-gradient(166deg, rgba(96, 20, 255, 1) 0%, rgba(132, 74, 255, 1) 35%);

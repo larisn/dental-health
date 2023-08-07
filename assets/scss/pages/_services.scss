@@ -1,6 +1,5 @@
 
 #s-services {
-  background: $purple-gradient-bg-services;
   .container {
     @include container();
     @include responsive-tablet() {
@@ -10,118 +9,158 @@
       padding: 8rem 2.5rem 10rem 2.5rem;
     }
     @include responsive-desktop() {
-      padding: 11rem 4rem 13rem 4rem;
-    }
-    button {
-      width: 250px;
-      height: 56px;
-      background-color: $dark-main;
-      border-radius: 2px;
-      color: $light-main;
-      font-weight: 500;
-      margin-top: 3rem;
-      &:hover {
-        background-color: #321a68;
-      }
+      padding: 16rem 4rem 13rem 4rem;
+      @include flexbox-between();
     }
   }
 }
 
 .container-text-services {
+  @include responsive-tablet() {
+    display: block;
+    margin-bottom: 6rem;
+  }
   h1 {
-    font: 600 4.2rem $font-main;
-    color: $light-main;
+    font: 400 5.5rem $font-main;
+    color: $dark-main;
+    position: relative;
+    line-height: 80px;
+    @include responsive-mobile() {
+      font-size: 3.5rem;
+      line-height: 60px;
+    }
+    span {
+      font: 600 5.5rem $font-main;
+      color: $dark-main;
+      @include responsive-mobile() {
+        font-size: 3.5rem;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 2px;
+      top: 190px;
+      margin-left: 5px;
+      background-color: $green-main;
+      @include responsive-mobile() {
+        top: 150px;
+      }
+    }
     @include responsive-mobile() {
       font-size: 3.5rem;
     }
   }
-  p {
-    font: 400 1.7rem $font-secondary;
-    max-width: 900px;
-    line-height: 28px;
-    margin-top: 2rem;
-    margin: 2rem 0 8rem 0;
-    color: $light-p;
-  }
-}
-
-.services {
-  @include flexbox-center();
-  text-align: center;
-  flex-wrap: wrap;
-  align-items: start;
-  gap: 36px;
-  article {
-    margin-bottom: 2.5rem;
-    background-color: #6038cc1f;
-    box-shadow: 0 0 40px 5px #6C29F9;
-    padding: 3rem 2rem 6rem 2rem;
-    border-radius: 20px;
-    border: 1px solid #ffffff18;
-    transition: all .4s ease-in-out;
+  button {
+    border: 1px solid $light-main;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    width: 300px;
+    border: 1px solid $green-main;
+    color: $green-main;
+    margin-top: 4rem;
+    font: 600 1.7rem $font-main;
+    text-transform: uppercase;
     &:hover {
-      box-shadow: 0 3px 24px #462e8850;
-      margin-top: -16px;
-    }
-    h2 {
+      background-color: $green-main;
       color: $light-main;
-      font: 600 2rem $font-main;
-      padding: 2rem 0 1.5rem 0;
     }
+  }
+  p {
+    margin-top: 8rem;
+    font: 400 2rem $font-main;
+    color: $dark-p;
+    max-width: 550px;
+    line-height: 38px;
+  }
+}
+
+.card-services {
+  @include flexbox-center();
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 700px;
+  height: 430px;
+  padding: 8rem 5rem 7rem 5rem;
+  background-color: #FCFCFC;
+  box-shadow: 0px 0px 30px 7px rgba(22, 26, 63, .1);
+  @include responsive-mobile() {
+    width: 100%;
+    height: 700px;
+    padding: 6rem 1rem 6rem 1rem;
+  }
+  div {
+    width: 120px;
+    text-align: center;
     p {
-      color: $light-p-services;
-      max-width: 357px;
-      font: 400 1.5rem $font-secondary;
-      line-height: 23px;
-      @include responsive-tablet() {
-        max-width: 280px;
-      }
-      @include responsive-desktop2() {
-        max-width: 330px;
-      }
+      margin-top: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.6rem;
     }
   }
 }
 
-.container-spin {
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    width: 69px;
-    height: 69px;
-    top: 0;
-    left: 142px;
-    border-radius: 50%;
-    border: 1px dashed $light-main;
-    animation: spin 12s linear infinite;
-    @include responsive-tablet() {
-      left: 104px;
-    }
-    @include responsive-desktop2() {
-      left: 129px;
-    }
-    @include responsive-mobile() {
-      left: 104px;
-    }
+.dental-icon {
+  font: 400 9rem xtd_dental_icons;
+  display: inline-block;
+  font-size: 6.5rem;
+  cursor: pointer;
+  color: $blue-main;
+  transition: all .2s ease-in-out;
+  &:hover {
+    font-size: 7rem;
+    color: $green-main;
   }
-  img {
-    width: 70px;
-    margin: 0 auto;
-    background-color: $dark-img-services;
-    transition: 0.5s;
-    padding: 1.1rem;
-    margin-top: .5rem;
-    box-shadow: 0 3px 13px 0 $purple-main;
-    border-radius: 50%;
+  @include responsive-mobile() {
+    font-size: 6rem;
   }
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+.icon1 {
+  &::before {
+    content: "\e80f";
   }
-  100% {
-    transform: rotate(360deg);
+}
+
+.icon2 {
+  &::before {
+    content: "\e816";
+  }
+}
+
+.icon3 {
+  &::before {
+    content: "\e80b";
+  }
+}
+
+.icon4 {
+  &::before {
+    content: "\e807";
+  }
+}
+
+.icon5 {
+  &::before {
+    content: "\e80e";
+  }
+}
+
+.icon6 {
+  &::before {
+    content: "\e804";
+  }
+}
+
+.icon7 {
+  &::before {
+    content: "\e815";
+  }
+}
+
+.icon8 {
+  &::before {
+    content: "\e812";
   }
 }

@@ -1,9 +1,9 @@
 
 footer {
-  background: url(/assets/img/bg-footer.png) no-repeat center 10% / cover;
-  height: 100%;
+  background-color: $dark-main;
   .container {
     @include container();
+    text-align: center;
     @include responsive-tablet() {
       padding: 7rem 4rem 6rem 4rem;
     }
@@ -11,76 +11,41 @@ footer {
       padding: 5rem 2.5rem 6rem 2.5rem;
     }
     @include responsive-desktop() {
-      padding: 7rem 4rem 4rem 4rem;
+      padding: 7rem 4rem 2rem 4rem;
     }
   }
 }
 
-.content-footer-links {
-  @include align-center();
-  align-items: start;
-  gap: 200px;
-  border-bottom: 1px solid $gray-line-footer;
-  padding-bottom: 2.6rem;
-  @include responsive-tablet() {
-    flex-wrap: wrap;
-    gap: 55px;
-  }
-  div:nth-child(1) {
-    img {
-      width: 270px;
-      margin: 3rem 0 3rem 0;
-    }
-    span {
-      color: rgba(255, 255, 255, 0.70);
-      font: 300 1.6rem $font-secondary;
-      line-height: 28px;
-    }
-  }
-}
-
-.content-links {
-  @include align-center();
-  align-items: start;
-  gap: 150px;
-  @include responsive-tablet() {
-    flex-wrap: wrap;
-    gap: 55px;
-  }
-  h1 {
-    color: $light-main;
-    font: 500 1.9rem $font-main;
-    letter-spacing: .7px;
-    margin-bottom: 2.5rem;
+.content-footer {
+  img {
+    width: 300px;
+    padding-bottom: 6rem;
   }
   p {
-    color: rgba(255, 255, 255, 0.70);
-    font: 400 1.5rem $font-secondary;
-    cursor: pointer;
-    padding-bottom: 1.7rem;
-    &:hover {
-      color: $light-main;
-    }
+    border-top: 1px solid #3f3e45;
+    padding-top: 8rem;
+    color: #cccccc;
+    font: 300 1.8rem $font-main;
+    line-height: 34px;
   }
 }
 
 .content-footer-infos {
-  @include flexbox-between();
+  @include flexbox-center();
+  gap: 20px;
   @include responsive-tablet() {
     flex-wrap: wrap;
   }
-  div {
-    @include align-center();
-    gap: 20px;
-    p {
-      color: rgba(255, 255, 255, 0.70);
-      font: 300 1.6rem $font-secondary;
-      padding-top: 4rem;
-      line-height: 28px;
-    }
-    img {
-      width: 24px;
-      padding-top: 4.5rem;
-    }
+  p {
+    color: rgba(255, 255, 255, 0.70);
+    font: 300 1.6rem $font-secondary;
+    padding-top: 4rem;
+    line-height: 28px;
+  }
+  img {
+    width: 25px;
+    padding-top: 4.5rem;
+    color: $light-main;
   }
 }
+

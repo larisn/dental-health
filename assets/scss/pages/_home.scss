@@ -1,44 +1,46 @@
 
 #s-home {
-  background: url(/assets/img/bg-home.png) no-repeat center 10% / cover;
+  background: url(/assets/img/bg-home.png) no-repeat center top 110px / cover;
   height: 100%;
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-color: $dark-mask-home;
-  }
   @include responsive-tablet() {
     height: 85%;
   }
   @include responsive-mobile() {
+    background: url(/assets/img/bg-home.png) no-repeat right center 110px / cover;
     height: 100%;
   }
   .container {
     @include container();
-    position: relative;
-    z-index: 2;
     @include responsive-tablet() {
       padding: 20rem 4rem 12rem 4rem;
     }
     @include responsive-mobile() {
-      padding: 14rem 2.5rem 12rem 2.5rem;
+      padding: 20rem 2.5rem 12rem 2.5rem;
     }
     @include responsive-desktop() {
-      padding: 26rem 4rem 23rem 4rem;
+      padding: 28rem 4rem 20rem 4rem;
     }
   }
 }
 
 .container-text-home {
+  span {
+    font: 500 1.8rem $font-secondary;
+    text-transform: uppercase;
+    color: rgba(239, 239, 239, 0.78);
+    line-height: 80px;
+    letter-spacing: 4px;
+    @include responsive-mobile() {
+      font: 500 1.4rem $font-secondary;
+      line-height: 25px;
+    }
+  }
   h1 {
-    font: 500 5rem $font-main;
+    font: 400 6.5rem $font-secondary;
     color: $light-main;
-    line-height: 70px;
-    max-width: 920px;
+    line-height: 85px;
+    max-width: 620px;
+    transform: translateY(-5px);
     @include responsive-tablet() {
       font-size: 4rem;
       line-height: 60px;
@@ -46,29 +48,57 @@
     @include responsive-mobile() {
       font-size: 3.5rem;
       line-height: 55px;
+      transform: translateY(10px);
     }
   }
   p {
-    color: $light-p;
-    font: 300 2rem $font-secondary;
+    color: $light-main;
+    font: 400 2rem $font-main;
     max-width: 780px;
-    line-height: 33px;
-    margin: 3rem 0 4.5rem 0;
+    line-height: 40px;
+    margin: 2.5rem 0 4.5rem 0;
     @include responsive-mobile() {
       font-size: 1.7rem;
+      line-height: 33px;
     }
   }
+}
+
+.container-buttons-home {
+  @include align-center();
+  gap: 30px;
+  @include responsive-mobile() {
+    flex-wrap: wrap;
+  }
   button {
-    width: 250px;
-    height: 56px;
-    background-color: $purple-main;
-    border-radius: 2px;
-    a {
-      color: $light-main;
-      font-weight: 500;
-    }
+    border: 1px solid $light-main;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    width: 170px;
+    font: 600 1.7rem $font-main;
+    text-transform: uppercase;
     &:hover {
-      background-color: #4515ca;
+      background-color: $light-bg;
+      color: $green-main;
+    }
+  }
+  div {
+    @include align-center();
+    gap: 12px;
+    img {
+      width: 50px;
+      background-color: $light-main;
+      padding: 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      &:hover {
+        width: 45px;
+      }
+    }
+    p {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 500;
     }
   }
 }

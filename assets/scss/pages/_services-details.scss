@@ -1,0 +1,107 @@
+
+#s-services-details {
+  background-color: $light-bg-services;
+  .container {
+    @include container();
+    @include responsive-tablet() {
+      padding: 8rem 4rem 10rem 4rem;
+    }
+    @include responsive-mobile() {
+      padding: 8rem 2.5rem 5rem 2.5rem;
+    }
+    @include responsive-desktop() {
+      padding: 11rem 1rem 13rem 1rem;
+    }
+    h1 {
+      font: 400 5rem $font-main;
+      color: $dark-main;
+      position: relative;
+      line-height: 80px;
+      text-align: center;
+      @include responsive-mobile() {
+        font-size: 3.5rem;
+        line-height: 60px;
+      }
+      span {
+        font: 500 5.5rem $font-main;
+        color: $dark-main;
+        @include responsive-mobile() {
+          font-size: 3.5rem;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 2px;
+        top: 110px;
+        left: 50%;
+        margin-left: 5px;
+        transform: translate(-50%, -50%);
+        background-color: $green-main;
+        @include responsive-mobile() {
+          top: 160px;
+        }
+      }
+      @include responsive-mobile() {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+.cards-services-details {
+  @include flexbox-center();
+  @include responsive-tablet() {
+    flex-wrap: wrap;
+  }
+  margin-top: 13rem;
+  align-items: start;
+  gap: 40px;
+  div {
+    img {
+      width: 320px;
+      height: 212px;
+    }
+    h2 {
+      font: 600 2rem $font-main;
+      letter-spacing: -.5px;
+      color: $dark-main;
+      padding-top: 3rem;
+    }
+    p {
+      font: 400 1.5rem $font-main;
+      color: $dark-main;
+      line-height: 27px;
+      padding-top: 1.5rem;
+      @include responsive-tablet() {
+        max-width: 300px;
+      }
+    }
+    a {
+      @include align-center();
+      font: 500 1.5rem $font-main;
+      text-transform: uppercase;
+      color: $green-main;
+      margin-top: 2rem;
+      height: 20px;
+      &:hover {
+        color: $blue-main;
+        .arrow-right {
+          display: none;
+        }
+        .arrow-right-blue {
+          display: block;
+        }
+      }
+      img {
+        width: 18px;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.arrow-right-blue {
+  display: none;
+}

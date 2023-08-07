@@ -17,30 +17,43 @@
 
 .container-text-depositions {
   h1 {
-    font: 700 4.2rem $font-main;
+    font: 400 5.5rem $font-main;
     color: $dark-main;
+    position: relative;
+    line-height: 90px;
+    max-width: 800px;
+    @include responsive-mobile() {
+      font-size: 3.5rem;
+      line-height: 60px;
+    }
     span {
-      color: $purple-main;
+      font: 600 5.5rem $font-main;
+      color: $dark-main;
+      @include responsive-mobile() {
+        font-size: 3.5rem;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 2px;
+      top: 220px;
+      margin-left: 5px;
+      background-color: $green-main;
+      @include responsive-mobile() {
+        top: 210px;
+      }
     }
     @include responsive-mobile() {
       font-size: 3.5rem;
-    }
-  }
-  p {
-    font: 500 1.7rem $font-secondary;
-    max-width: 750px;
-    line-height: 32px;
-    margin-top: 2.5rem;
-    color: $gray-p;
-    @include responsive-mobile() {
-      margin-bottom: 2.5rem;
     }
   }
 }
 
 .posts-wrapper {
   overflow-x: auto;
-  margin-top: 10rem;
+  margin-top: 15rem;
   @include responsive-mobile() {
     margin-top: 6rem;
   }
@@ -61,67 +74,56 @@
   margin-top: 3rem;
   button {
     width: 5px;
-    border: 1px solid $purple-main;
+    border: 1px solid $green-main;
     border-radius: 50%;
     padding: 6px;
     transition: .2s all ease-in-out;
     cursor: pointer;
     &:hover {
-      background-color: $purple-main;
+      background-color: $green-main;
     }
     &.current-button {
-      background-color: $purple-main;
+      background-color: $green-main;
     }
   }
 }
 
 .deposition1 {
-  text-align: center;
-  padding: 2.5rem 3rem 3rem 3rem;
-  border-radius: 8px;
+  padding: 4rem 3.5rem 4rem 3.5rem;
+  width: 330px;
+  height: 330px;
+  border-radius: 13px;
+  img {
+    width: 45px;
+    padding-bottom: .7rem;
+  }
   h2 {
-    font: 400 1.8rem $font-third;
+    font: 400 1.8rem $font-main;
     color: $light-main;
     padding-bottom: 1rem;
   }
   p {
-    font: 300 1.6rem $font-secondary;
+    font: 300 1.6rem $font-main;
     color: $light-main;
-    max-width: 300px;
-    line-height: 28px;
+    max-width: 250px;
+    line-height: 30px;
     padding-top: 2rem;
+    padding: 2rem 0 2rem 0;
   }
 
-  .people-picture {
-    margin: 0 auto;
-    padding: 2.5rem 0 1rem 0;
-    width: 80px;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 87px;
-      height: 87px;
-      top: 21px;
-      left: -6px;
-      border-radius: 50%;
-      border: 3px solid $purple-main;
-      animation: spin 12s linear infinite;
-    }
-  }
   h4 {
-    font: 400 2rem $font-third;
+    font: 400 2rem $font-main;
     color: $light-main;
   }
   span {
-    font: 200 1.5rem $font-third;
+    font: 200 1.5rem $font-main;
     color: $light-main;
     letter-spacing: .5px;
   }
 }
 
 .deposition2 {
-  background-color: $light-bg-carousel;
+  background-color: #cad1ba;
   h2 {
     color: $dark-main;
     font-weight: 500;
@@ -129,11 +131,11 @@
   p, h4, span {
     color: $dark-main;
   }
-  .people-picture {
-    &::after {
-      color: $purple-main;
-      top: 19px;
-    }
+  .quotion-green {
+    display: block;
+  }
+  .quotion-white {
+    display: none;
   }
 }
 
@@ -145,21 +147,32 @@
 
 .current-item {
   opacity: 1;
-  background: $purple-gradient-carousel;
+  background: $gradient-carousel;
   h2, p, h4, span {
     color: $light-main;
   }
-  .people-picture {
-    &::after {
-      border-color: $light-main;
-    }
+  .quotion-green {
+    display: none;
+  }
+  .quotion-white {
+    display: block;
   }
 }
 
-.stars {
-  @include flexbox-center();
-  gap: 8px;
+.patient-profile {
+  @include align-center();
+  gap: 14px;
+  align-items: start;
   img {
-    width: 18px;
+    width: 50px;
+    margin: 0;
+    transform: translateY(8px);
+  }
+  div:nth-child(2) {
+    margin-top: 1rem;
+    h4 {
+      font: 500 1.8rem $font-main;
+      padding-bottom: .5rem;
+    }
   }
 }
