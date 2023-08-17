@@ -21,7 +21,7 @@
 <br>
 <br>
 
-## 🏋🏻‍♀️ Sobre
+## 🦷 Sobre
 
 > É um projeto de uma landing page para o portfólio da Inova Company, que é a empresa onde trabalho.
 <br>
