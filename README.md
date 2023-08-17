@@ -28,14 +28,13 @@
 
 
 ## 💮 Seções
-O site é composto por seis partes:
+O site é composto por cinco partes:
 
-- **Home:** Nessa parte é uma breve apresentação da academia;
-- **Programas:** Mostra alguns programas de treino que a academia possui;
-- **Planos:** Mostra os planos disponíveis para o cliente;
-- **App:** É onde instiga o usuário a fazer o download do aplicativo para celular;
-- **Dicas:** É o carrossel de posts do instagram, onde tem dicas para o cliente.;
-- **Informações:** Apresenta algumas informações sobre a empresa e um formulário para recebimento da newsletter;
+- **Home:** Nessa parte é uma breve apresentação da empresa.
+- **Sobre nós:** Fala um pouco sobre a empresa.
+- **Serviços:** Mostra os atendimentos prestados.
+- **Depoimentos:** É onde fica o depoimento de clientes antigos.
+- **Contato:** É uma seção de contato com formulário.
 <br>
 
 ---
